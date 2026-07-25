@@ -42,6 +42,7 @@ from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 from categorize import categorize, CATEGORY_LABELS  # noqa: E402
+from fetch_stars import repo_for_project  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -131,23 +132,24 @@ def parse_file(edition: str, path: Path):
             # 跳过指向子版面的相对链接（非真实产品）
             if not url.startswith("http"):
                 continue
-            projects.append(
-                {
-                    "id": make_id(name, url),
-                    "name": name,
-                    "url": url,
-                    "description": desc_clean,
-                    "status": STATUS_MAP.get(emoji, "unknown"),
-                    "category": categorize(name, desc_clean, url, edition),
-                    "edition": edition,
-                    "developer": cur_dev,
-                    "developer_links": cur_dev_links,
-                    "extra_links": extra,
-                    "date_added": cur_date,
-                    "source_file": str(path.relative_to(ROOT)),
-                    "source_line": lineno,
-                }
-            )
+            item = {
+                "id": make_id(name, url),
+                "name": name,
+                "url": url,
+                "description": desc_clean,
+                "status": STATUS_MAP.get(emoji, "unknown"),
+                "category": categorize(name, desc_clean, url, edition),
+                "edition": edition,
+                "developer": cur_dev,
+                "developer_links": cur_dev_links,
+                "extra_links": extra,
+                "date_added": cur_date,
+                "source_file": str(path.relative_to(ROOT)),
+                "source_line": lineno,
+            }
+            # 关联的 GitHub 仓库（用于匹配 stars.json），没有则为 None
+            item["repo"] = repo_for_project(item)
+            projects.append(item)
 
     return projects
 

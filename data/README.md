@@ -28,11 +28,27 @@ python3 scripts/check_links.py --workers 30 --report data/dead_links.md
 自动化：[`.github/workflows/check_links.yml`](../.github/workflows/check_links.yml)
 每周一自动跑一次，把结果提交回仓库并写入任务摘要。
 
-## 3. 站点：可搜索 / 可筛选目录
+## 3. Star 数：开源项目热度
 
-根目录 [`index.html`](../index.html) 是纯静态单页，读取上面两个 JSON，
-支持：关键词搜索（产品名/介绍/开发者）、按版面和状态筛选、
-排序、以及基于存活检测的「隐藏失效链接」开关。
+```bash
+python3 scripts/fetch_stars.py
+```
+
+从产品链接（或描述里的「开源/源码」链接）解析出 GitHub 仓库，
+用 GraphQL 批量查询 star 数（100 个/请求），输出 [`data/stars.json`](stars.json)。
+
+Token 来源：环境变量 `GITHUB_TOKEN` → `gh auth token`；本地装了 `gh` 时由它代理认证。
+
+覆盖率：2708 个产品中约 566 个（21%）是开源项目能取到 star，
+其余是网站 / App Store 等无 star 概念的产品。
+解析时会排除指向本仓库 issue 的「更多介绍」链接，避免误关联。
+
+## 4. 站点：可搜索 / 可筛选目录
+
+根目录 [`index.html`](../index.html) 是纯静态单页，读取上面三个 JSON，支持：
+关键词搜索（产品名/介绍/开发者）、按品类/版面/状态筛选、
+**默认按 star 数降序**（无 star 的产品按添加时间排在其后）、
+「仅开源项目」与「隐藏失效链接」开关。
 
 本地预览：
 

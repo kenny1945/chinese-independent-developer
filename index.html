@@ -120,6 +120,15 @@
     background: var(--bg); border: 1px solid var(--border); color: var(--muted);
   }
   .tag.cat { background: var(--accent-soft); border-color: transparent; color: var(--accent); font-weight: 600; }
+  .stars {
+    font-size: 12px; font-weight: 700; white-space: nowrap; text-decoration: none;
+    color: #b8860b; background: #fbf3dd; padding: 3px 8px; border-radius: 999px;
+    font-variant-numeric: tabular-nums;
+  }
+  .stars:hover { filter: brightness(.94); }
+  @media (prefers-color-scheme: dark) { .stars { color: #e0b64a; background: #332a12; } }
+  :root[data-theme="dark"] .stars { color: #e0b64a; background: #332a12; }
+  :root[data-theme="light"] .stars { color: #b8860b; background: #fbf3dd; }
   .loadmore {
     display: block; margin: 8px auto 60px; padding: 11px 28px; font-size: 14px;
     border-radius: 10px; border: 1px solid var(--border); background: var(--panel);
@@ -147,6 +156,7 @@
       <input id="q" type="search" placeholder="搜索产品名、介绍、开发者…（例如：AI 工具、PDF、翻译）" autocomplete="off" />
       <select id="cat"><option value="">全部品类</option></select>
       <select id="sort">
+        <option value="stars">⭐ Star 最多</option>
         <option value="new">最新添加</option>
         <option value="old">最早添加</option>
         <option value="name">名称 A→Z</option>
@@ -163,7 +173,8 @@
       <span class="chip" data-group="status" data-value="online">✅ 已上线</span>
       <span class="chip" data-group="status" data-value="developing">🕗 开发中</span>
       <span class="chip" data-group="status" data-value="closed">❌ 已关闭</span>
-      <label class="toggle"><input type="checkbox" id="hideDead" /> 隐藏失效链接</label>
+      <label class="toggle"><input type="checkbox" id="onlyRepo" /> 仅开源项目</label>
+      <label class="toggle" style="margin-left:0"><input type="checkbox" id="hideDead" /> 隐藏失效链接</label>
     </div>
   </div>
 </div>
@@ -180,8 +191,9 @@
 
 <script>
 const PAGE = 60;
-let ALL = [], LINKS = {}, CATLABELS = {}, filtered = [], shown = 0;
-const state = { q: "", edition: "", status: "", category: "", sort: "new", hideDead: false };
+let ALL = [], LINKS = {}, CATLABELS = {}, STARS = {}, filtered = [], shown = 0;
+const state = { q: "", edition: "", status: "", category: "", sort: "stars",
+                hideDead: false, onlyRepo: false };
 const $ = s => document.querySelector(s);
 
 function esc(s){ return (s||"").replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
@@ -195,6 +207,11 @@ const badgeText = { online:"已上线", developing:"开发中", closed:"已关�
 const edname = { main:"主版面", programmer:"程序员版", game:"游戏", archive:"存档" };
 
 function isDead(p){ const r = LINKS[p.url]; return r && r.state === 'dead'; }
+function starOf(p){ return (p.repo && STARS[p.repo] != null) ? STARS[p.repo] : -1; }
+function fmtStars(n){
+  return n >= 1000 ? (n/1000).toFixed(n >= 10000 ? 0 : 1).replace(/\.0$/,'') + 'k'
+                   : String(n);
+}
 
 function apply(){
   const q = state.q.trim().toLowerCase();
@@ -203,6 +220,7 @@ function apply(){
     if(state.status && p.status !== state.status) return false;
     if(state.category && p.category !== state.category) return false;
     if(state.hideDead && isDead(p)) return false;
+    if(state.onlyRepo && starOf(p) < 0) return false;
     if(q){
       const hay = (p.name+' '+p.description+' '+(p.developer||'')).toLowerCase();
       if(!hay.includes(q)) return false;
@@ -212,6 +230,11 @@ function apply(){
   filtered.sort((a,b) => {
     if(state.sort==='name') return a.name.localeCompare(b.name,'zh');
     const da = a.date_added||'', db = b.date_added||'';
+    if(state.sort==='stars'){
+      const sa = starOf(a), sb = starOf(b);
+      if(sa !== sb) return sb - sa;           // star 多的在前
+      return db.localeCompare(da);            // 同星数（含无星数）按新→旧
+    }
     return state.sort==='old' ? da.localeCompare(db) : db.localeCompare(da);
   });
   shown = 0;
@@ -235,6 +258,7 @@ function renderMore(){
     return `<div class="card">
       <div class="top">
         <h3><a href="${esc(p.url)}" target="_blank" rel="noopener">${hl(p.name,q)}</a></h3>
+        ${starOf(p) >= 0 ? `<a class="stars" href="https://github.com/${esc(p.repo)}" target="_blank" rel="noopener" title="${starOf(p).toLocaleString()} stars · ${esc(p.repo)}">★ ${fmtStars(starOf(p))}</a>` : ''}
         ${badge}
       </div>
       <div class="desc">${hl(p.description,q)}</div>
@@ -261,7 +285,7 @@ function renderStats(meta){
   const items = [
     ['产品总数', meta.count],
     ['已上线', s.online||0],
-    ['开发中', s.developing||0],
+    ['开源项目', ALL.filter(p => starOf(p) >= 0).length],
     ['已关闭', s.closed||0],
   ];
   $('#stats').innerHTML = items.map(([k,v]) =>
@@ -278,6 +302,7 @@ $('#q').addEventListener('input', e => {
 $('#sort').addEventListener('change', e => { state.sort = e.target.value; apply(); });
 $('#cat').addEventListener('change', e => { state.category = e.target.value; apply(); });
 $('#hideDead').addEventListener('change', e => { state.hideDead = e.target.checked; apply(); });
+$('#onlyRepo').addEventListener('change', e => { state.onlyRepo = e.target.checked; apply(); });
 $('#filters').addEventListener('click', e => {
   const chip = e.target.closest('.chip'); if(!chip) return;
   const g = chip.dataset.group;
@@ -292,9 +317,11 @@ $('#loadmore').addEventListener('click', renderMore);
 Promise.all([
   fetch('data/projects.json').then(r => r.json()),
   fetch('data/link_status.json').then(r => r.ok ? r.json() : {results:{}}).catch(() => ({results:{}})),
-]).then(([data, links]) => {
+  fetch('data/stars.json').then(r => r.ok ? r.json() : {stars:{}}).catch(() => ({stars:{}})),
+]).then(([data, links, starData]) => {
   ALL = data.projects;
   LINKS = links.results || {};
+  STARS = starData.stars || {};
   CATLABELS = data.category_labels || {};
   // 品类下拉：按数量降序，附带计数
   const breakdown = data.category_breakdown || {};
@@ -309,6 +336,11 @@ Promise.all([
     });
   const deadCount = Object.values(LINKS).filter(r => r.state==='dead').length;
   if(deadCount === 0){ $('#hideDead').closest('.toggle').style.display = 'none'; }
+  if(Object.keys(STARS).length === 0){
+    $('#onlyRepo').closest('.toggle').style.display = 'none';
+    $('#sort').querySelector('option[value="stars"]').remove();
+    state.sort = 'new';
+  }
   renderStats(data);
   apply();
 }).catch(err => {

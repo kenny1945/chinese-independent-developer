@@ -1,4 +1,4 @@
-name: 链接存活检测
+name: 数据刷新（链接存活 + Star 数）
 
 on:
   schedule:
@@ -22,6 +22,11 @@ jobs:
 
       - name: 解析 README 生成最新数据
         run: python scripts/parse_readme.py --stats
+
+      - name: 抓取 GitHub Star 数
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/fetch_stars.py
 
       - name: 检测链接存活
         run: python scripts/check_links.py --workers 30 --report data/dead_links.md
@@ -47,7 +52,7 @@ jobs:
         run: |
           git config user.name  "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add data/link_status.json data/dead_links.md data/projects.json
+          git add data/link_status.json data/dead_links.md data/projects.json data/stars.json
           if git diff --staged --quiet; then
             echo "无变化，跳过提交"
           else
