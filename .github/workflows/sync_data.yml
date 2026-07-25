@@ -1,0 +1,71 @@
+name: 数据同步（README 变更后重新解析）
+
+on:
+  push:
+    branches: [master]
+    paths:                    # 只在清单本身变化时触发（PR 合并进 master 即触发）
+      - 'README.md'
+      - 'pages/**.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:                  # 连续合并多个 PR 时，只跑最后一次
+  group: sync-data
+  cancel-in-progress: true
+
+jobs:
+  reparse:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6.0.1
+
+      - name: Setup Python
+        uses: actions/setup-python@v6.1.0
+        with:
+          python-version: '3.13'
+
+      - name: 重新解析清单
+        run: python scripts/parse_readme.py --stats
+
+      - name: 抓取新增项目的 Star 数
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/fetch_stars.py
+        continue-on-error: true   # star 抓取失败不应阻断数据同步
+
+      - name: 提交结果（仅在产品数据真正变化时）
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/projects.json data/stars.json
+
+          # 每次解析都会刷新 generated_at 时间戳，若只有它变化则视为无实质改动，
+          # 避免产生无意义的空提交
+          REAL=$(git diff --staged -U0 -- data/projects.json data/stars.json \
+                 | grep -E '^[+-]' \
+                 | grep -vE '^(\+\+\+|---)' \
+                 | grep -vc '"generated_at"' || true)
+
+          if [ "${REAL:-0}" -eq 0 ]; then
+            echo "产品数据无实质变化，跳过提交"
+            git reset
+          else
+            echo "检测到 $REAL 行实质变化，提交更新"
+            git commit -m "chore: 同步 README 变更到结构化数据 [skip ci]"
+            git push
+          fi
+
+      - name: 写入任务摘要
+        if: always()
+        run: |
+          echo "## 数据同步结果" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          d = json.load(open("data/projects.json"))
+          print(f"- 产品总数：{d['count']}")
+          print(f"- 版面分布：{d['editions']}")
+          print(f"- 状态分布：{d['status_breakdown']}")
+          PY
