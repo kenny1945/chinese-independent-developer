@@ -1,0 +1,56 @@
+name: 链接存活检测
+
+on:
+  schedule:
+    - cron: '0 2 * * 1'      # 每周一 02:00 UTC 自动检测
+  workflow_dispatch:          # 支持手动触发
+
+permissions:
+  contents: write             # 允许提交回 data/ 结果
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v6.0.1
+
+      - name: Setup Python
+        uses: actions/setup-python@v6.1.0
+        with:
+          python-version: '3.13'
+
+      - name: 解析 README 生成最新数据
+        run: python scripts/parse_readme.py --stats
+
+      - name: 检测链接存活
+        run: python scripts/check_links.py --workers 30 --report data/dead_links.md
+
+      - name: 写入任务摘要
+        if: always()
+        run: |
+          echo "## 链接存活检测结果" >> "$GITHUB_STEP_SUMMARY"
+          python - <<'PY' >> "$GITHUB_STEP_SUMMARY"
+          import json
+          d = json.load(open("data/link_status.json"))
+          s = d["summary"]
+          print(f"- 检测时间：{d['generated_at']}")
+          print(f"- 共检测：{d['checked']}")
+          print(f"- ✅ 存活：{s['alive']}　❌ 失效：{s['dead']}　❓ 未知：{s['unknown']}")
+          PY
+          if [ -f data/dead_links.md ]; then
+            echo "" >> "$GITHUB_STEP_SUMMARY"
+            cat data/dead_links.md >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: 提交结果
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add data/link_status.json data/dead_links.md data/projects.json
+          if git diff --staged --quiet; then
+            echo "无变化，跳过提交"
+          else
+            git commit -m "chore: 更新链接存活检测结果 [skip ci]"
+            git push
+          fi

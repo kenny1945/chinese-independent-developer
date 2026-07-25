@@ -19,3 +19,6 @@ env/
 # IDE
 .vscode/
 .idea/
+
+# 本地预览配置（Claude Code 生成，不入库）
+.claude/launch.json

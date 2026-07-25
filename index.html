@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>中国独立开发者项目 · 可搜索目录</title>
+<meta name="description" content="中国独立开发者项目列表 —— 可搜索、可筛选、带存活状态的产品目录" />
+<style>
+  :root {
+    --bg: #f7f7f8;
+    --panel: #ffffff;
+    --border: #e5e5ea;
+    --text: #1a1a1e;
+    --muted: #6b6b74;
+    --accent: #d6452c;
+    --accent-soft: #fbe9e5;
+    --online: #1a8f4c;
+    --online-bg: #e6f5ec;
+    --dev: #b8860b;
+    --dev-bg: #fbf3dd;
+    --closed: #9a9aa0;
+    --closed-bg: #eeeeef;
+    --shadow: 0 1px 2px rgba(0,0,0,.05), 0 4px 16px rgba(0,0,0,.04);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #0e0e11; --panel: #17171b; --border: #2a2a30;
+      --text: #ececf0; --muted: #9a9aa4; --accent: #ff6a4d; --accent-soft: #3a1f19;
+      --online:#4ade80; --online-bg:#12301f; --dev:#e0b64a; --dev-bg:#332a12;
+      --closed:#7a7a82; --closed-bg:#232329;
+      --shadow: 0 1px 2px rgba(0,0,0,.4), 0 4px 16px rgba(0,0,0,.3);
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC",
+      "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+    line-height: 1.5;
+  }
+  a { color: inherit; }
+  .wrap { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+
+  header.hero {
+    background: var(--panel); border-bottom: 1px solid var(--border);
+    padding: 28px 0 20px;
+  }
+  .hero h1 { margin: 0 0 4px; font-size: 24px; letter-spacing: -.02em; }
+  .hero p { margin: 0; color: var(--muted); font-size: 14px; }
+  .hero .src { font-size: 12px; margin-top: 6px; }
+  .hero .src a { color: var(--accent); text-decoration: none; }
+
+  .stats { display: flex; gap: 22px; margin-top: 16px; flex-wrap: wrap; }
+  .stat { display: flex; flex-direction: column; }
+  .stat b { font-size: 22px; font-variant-numeric: tabular-nums; }
+  .stat span { font-size: 12px; color: var(--muted); }
+
+  .controls {
+    position: sticky; top: 0; z-index: 20; background: var(--bg);
+    padding: 16px 0; border-bottom: 1px solid var(--border);
+  }
+  .searchbar {
+    display: flex; gap: 10px; align-items: center; margin-bottom: 12px;
+  }
+  .searchbar input {
+    flex: 1; padding: 11px 14px; font-size: 15px; border-radius: 10px;
+    border: 1px solid var(--border); background: var(--panel); color: var(--text);
+    outline: none;
+  }
+  .searchbar input:focus { border-color: var(--accent); }
+  .searchbar select {
+    padding: 11px 12px; border-radius: 10px; border: 1px solid var(--border);
+    background: var(--panel); color: var(--text); font-size: 14px;
+  }
+  .filters { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+  .chip {
+    padding: 6px 12px; border-radius: 999px; border: 1px solid var(--border);
+    background: var(--panel); color: var(--muted); font-size: 13px; cursor: pointer;
+    user-select: none; white-space: nowrap;
+  }
+  .chip:hover { border-color: var(--accent); }
+  .chip.active { background: var(--accent-soft); color: var(--accent); border-color: var(--accent); }
+  .toggle {
+    margin-left: auto; display: flex; align-items: center; gap: 6px;
+    font-size: 13px; color: var(--muted); cursor: pointer;
+  }
+
+  .count-line { color: var(--muted); font-size: 13px; margin: 14px 0; }
+
+  .grid {
+    display: grid; gap: 14px; padding-bottom: 40px;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  }
+  .card {
+    background: var(--panel); border: 1px solid var(--border); border-radius: 14px;
+    padding: 16px; box-shadow: var(--shadow); display: flex; flex-direction: column;
+    min-height: 120px;
+  }
+  .card .top { display: flex; align-items: flex-start; gap: 8px; margin-bottom: 6px; }
+  .card h3 { margin: 0; font-size: 16px; letter-spacing: -.01em; flex: 1; }
+  .card h3 a { text-decoration: none; }
+  .card h3 a:hover { color: var(--accent); }
+  .badge {
+    font-size: 11px; padding: 3px 8px; border-radius: 999px; white-space: nowrap;
+    font-weight: 600;
+  }
+  .badge.online { color: var(--online); background: var(--online-bg); }
+  .badge.developing { color: var(--dev); background: var(--dev-bg); }
+  .badge.closed { color: var(--closed); background: var(--closed-bg); }
+  .badge.dead { color: #fff; background: var(--accent); }
+  .card .desc { font-size: 13.5px; color: var(--text); margin: 2px 0 10px; flex: 1; }
+  .card .meta {
+    display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+    font-size: 12px; color: var(--muted); margin-top: auto;
+  }
+  .card .meta .dev { font-weight: 600; color: var(--text); }
+  .card .meta a { color: var(--accent); text-decoration: none; }
+  .tag {
+    font-size: 11px; padding: 2px 7px; border-radius: 6px;
+    background: var(--bg); border: 1px solid var(--border); color: var(--muted);
+  }
+  .tag.cat { background: var(--accent-soft); border-color: transparent; color: var(--accent); font-weight: 600; }
+  .loadmore {
+    display: block; margin: 8px auto 60px; padding: 11px 28px; font-size: 14px;
+    border-radius: 10px; border: 1px solid var(--border); background: var(--panel);
+    color: var(--text); cursor: pointer;
+  }
+  .loadmore:hover { border-color: var(--accent); color: var(--accent); }
+  .empty { text-align: center; color: var(--muted); padding: 60px 0; }
+  footer { color: var(--muted); font-size: 12px; text-align: center; padding: 30px 0 50px; }
+  mark { background: var(--accent-soft); color: var(--accent); padding: 0 1px; border-radius: 3px; }
+</style>
+</head>
+<body>
+<header class="hero">
+  <div class="wrap">
+    <h1>中国独立开发者项目目录</h1>
+    <p>把 <b>近三千个</b>独立产品变成可搜索、可筛选、带存活状态的目录</p>
+    <p class="src">数据来自 <a href="https://github.com/1c7/chinese-independent-developer" target="_blank" rel="noopener">chinese-independent-developer</a>　·　本页由 <code>data/projects.json</code> 驱动</p>
+    <div class="stats" id="stats"></div>
+  </div>
+</header>
+
+<div class="controls">
+  <div class="wrap">
+    <div class="searchbar">
+      <input id="q" type="search" placeholder="搜索产品名、介绍、开发者…（例如：AI 工具、PDF、翻译）" autocomplete="off" />
+      <select id="cat"><option value="">全部品类</option></select>
+      <select id="sort">
+        <option value="new">最新添加</option>
+        <option value="old">最早添加</option>
+        <option value="name">名称 A→Z</option>
+      </select>
+    </div>
+    <div class="filters" id="filters">
+      <span class="chip active" data-group="edition" data-value="">全部版面</span>
+      <span class="chip" data-group="edition" data-value="main">主版面</span>
+      <span class="chip" data-group="edition" data-value="programmer">程序员版</span>
+      <span class="chip" data-group="edition" data-value="game">游戏</span>
+      <span class="chip" data-group="edition" data-value="archive">存档 2018-20</span>
+      <span style="width:1px;height:20px;background:var(--border);margin:0 4px"></span>
+      <span class="chip active" data-group="status" data-value="">任意状态</span>
+      <span class="chip" data-group="status" data-value="online">✅ 已上线</span>
+      <span class="chip" data-group="status" data-value="developing">🕗 开发中</span>
+      <span class="chip" data-group="status" data-value="closed">❌ 已关闭</span>
+      <label class="toggle"><input type="checkbox" id="hideDead" /> 隐藏失效链接</label>
+    </div>
+  </div>
+</div>
+
+<main class="wrap">
+  <div class="count-line" id="countLine">加载中…</div>
+  <div class="grid" id="grid"></div>
+  <button class="loadmore" id="loadmore" style="display:none">加载更多</button>
+</main>
+
+<footer>
+  开源目录原型　·　<span id="genTime"></span>
+</footer>
+
+<script>
+const PAGE = 60;
+let ALL = [], LINKS = {}, CATLABELS = {}, filtered = [], shown = 0;
+const state = { q: "", edition: "", status: "", category: "", sort: "new", hideDead: false };
+const $ = s => document.querySelector(s);
+
+function esc(s){ return (s||"").replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c])); }
+function hl(text, q){
+  const t = esc(text);
+  if(!q) return t;
+  try { return t.replace(new RegExp('('+q.replace(/[.*+?^${}()|[\]\\]/g,'\\$&')+')','gi'),'<mark>$1</mark>'); }
+  catch(e){ return t; }
+}
+const badgeText = { online:"已上线", developing:"开发中", closed:"已关闭" };
+const edname = { main:"主版面", programmer:"程序员版", game:"游戏", archive:"存档" };
+
+function isDead(p){ const r = LINKS[p.url]; return r && r.state === 'dead'; }
+
+function apply(){
+  const q = state.q.trim().toLowerCase();
+  filtered = ALL.filter(p => {
+    if(state.edition && p.edition !== state.edition) return false;
+    if(state.status && p.status !== state.status) return false;
+    if(state.category && p.category !== state.category) return false;
+    if(state.hideDead && isDead(p)) return false;
+    if(q){
+      const hay = (p.name+' '+p.description+' '+(p.developer||'')).toLowerCase();
+      if(!hay.includes(q)) return false;
+    }
+    return true;
+  });
+  filtered.sort((a,b) => {
+    if(state.sort==='name') return a.name.localeCompare(b.name,'zh');
+    const da = a.date_added||'', db = b.date_added||'';
+    return state.sort==='old' ? da.localeCompare(db) : db.localeCompare(da);
+  });
+  shown = 0;
+  $('#grid').innerHTML = '';
+  $('#countLine').textContent = `找到 ${filtered.length.toLocaleString()} 个产品`;
+  renderMore();
+}
+
+function renderMore(){
+  const q = state.q.trim();
+  const slice = filtered.slice(shown, shown+PAGE);
+  const html = slice.map(p => {
+    const dead = isDead(p);
+    const badge = dead
+      ? '<span class="badge dead">链接失效</span>'
+      : `<span class="badge ${p.status}">${badgeText[p.status]||'未知'}</span>`;
+    const devLinks = (p.developer_links||[]).map(l =>
+      `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join(' ');
+    const extra = (p.extra_links||[]).map(l =>
+      `<a href="${esc(l.url)}" target="_blank" rel="noopener">${esc(l.label)}</a>`).join(' ');
+    return `<div class="card">
+      <div class="top">
+        <h3><a href="${esc(p.url)}" target="_blank" rel="noopener">${hl(p.name,q)}</a></h3>
+        ${badge}
+      </div>
+      <div class="desc">${hl(p.description,q)}</div>
+      <div class="meta">
+        <span class="dev">${hl(p.developer||'匿名',q)}</span>
+        ${devLinks}
+        ${p.category && p.category!=='other' ? `<span class="tag cat">${esc(CATLABELS[p.category]||p.category)}</span>` : ''}
+        <span class="tag">${edname[p.edition]||p.edition}</span>
+        ${p.date_added ? `<span class="tag">${p.date_added}</span>` : ''}
+        ${extra}
+      </div>
+    </div>`;
+  }).join('');
+  $('#grid').insertAdjacentHTML('beforeend', html);
+  shown += slice.length;
+  $('#loadmore').style.display = shown < filtered.length ? 'block' : 'none';
+  if(filtered.length === 0){
+    $('#grid').innerHTML = '<div class="empty">没有匹配的产品，换个关键词试试～</div>';
+  }
+}
+
+function renderStats(meta){
+  const s = meta.status_breakdown || {};
+  const items = [
+    ['产品总数', meta.count],
+    ['已上线', s.online||0],
+    ['开发中', s.developing||0],
+    ['已关闭', s.closed||0],
+  ];
+  $('#stats').innerHTML = items.map(([k,v]) =>
+    `<div class="stat"><b>${(v||0).toLocaleString()}</b><span>${k}</span></div>`).join('');
+  $('#genTime').textContent = '数据生成于 ' + (meta.generated_at||'');
+}
+
+// 事件
+let timer;
+$('#q').addEventListener('input', e => {
+  clearTimeout(timer); state.q = e.target.value;
+  timer = setTimeout(apply, 150);
+});
+$('#sort').addEventListener('change', e => { state.sort = e.target.value; apply(); });
+$('#cat').addEventListener('change', e => { state.category = e.target.value; apply(); });
+$('#hideDead').addEventListener('change', e => { state.hideDead = e.target.checked; apply(); });
+$('#filters').addEventListener('click', e => {
+  const chip = e.target.closest('.chip'); if(!chip) return;
+  const g = chip.dataset.group;
+  document.querySelectorAll(`.chip[data-group="${g}"]`).forEach(c => c.classList.remove('active'));
+  chip.classList.add('active');
+  state[g] = chip.dataset.value;
+  apply();
+});
+$('#loadmore').addEventListener('click', renderMore);
+
+// 加载数据
+Promise.all([
+  fetch('data/projects.json').then(r => r.json()),
+  fetch('data/link_status.json').then(r => r.ok ? r.json() : {results:{}}).catch(() => ({results:{}})),
+]).then(([data, links]) => {
+  ALL = data.projects;
+  LINKS = links.results || {};
+  CATLABELS = data.category_labels || {};
+  // 品类下拉：按数量降序，附带计数
+  const breakdown = data.category_breakdown || {};
+  const sel = $('#cat');
+  Object.entries(breakdown)
+    .sort((a,b) => b[1]-a[1])
+    .forEach(([code, n]) => {
+      const o = document.createElement('option');
+      o.value = code;
+      o.textContent = `${CATLABELS[code]||code}（${n}）`;
+      sel.appendChild(o);
+    });
+  const deadCount = Object.values(LINKS).filter(r => r.state==='dead').length;
+  if(deadCount === 0){ $('#hideDead').closest('.toggle').style.display = 'none'; }
+  renderStats(data);
+  apply();
+}).catch(err => {
+  $('#countLine').textContent = '数据加载失败：' + err;
+});
+</script>
+</body>
+</html>
