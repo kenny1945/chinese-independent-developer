@@ -1,12 +1,13 @@
-# 失效链接清单（2026-08-03T05:45:30Z）
+# 失效链接清单（2026-08-10T03:59:16Z）
 
-共 366 条疑似失效：
+共 370 条疑似失效：
 
 | 产品 | 开发者 | 版面 | 原因 | 链接 |
 | --- | --- | --- | --- | --- |
 | AiSiteLink | AntHome(洛阳) | main | HTTP 404 | https://www.aisitelink.com/ |
 | Seed Audio | yoga666996 | main | HTTP 404 | https://seed-audio.org |
 | MusiCard | shadycheer | main | HTTP 404 | https://musi-card-two.vercel.app |
+| htmltourl | benny(佛山) | main | dns | https://htmltourl.com/ |
 | 憩连 | Paul Peng（深圳） | main | dns | https://www.qliann.com |
 | Z3r0 | yv1ing(合肥) | main | dns | https://z3r0.fans/ |
 | 古代灵魂测试 | gf1023456 | main | dns | https://tonystark-ai.ccwu.cc/apti/ |
@@ -29,7 +30,6 @@
 | 批量域名检查 | Ronald | main | dns | https://domainschecker.top/ |
 | iaiapp.org | levan(深圳) | main | HTTP 404 | https://iaiapp.org |
 | AI 图像站 | h3(广州) | main | HTTP 404 | https://www.gempix2.org |
-| TAO tracker | 菩提尘埃(厦门) | main | HTTP 404 | https://taotracker.org |
 | KidsBedroomIdeas | Ricky Lee(深圳) | main | HTTP 404 | https://kidsbedroomideas.org/ |
 | ReadTube | dodid | main | HTTP 404 | https://apps.apple.com/cn/app/readtube-youtube-video-summary/id6752214777 |
 | CSS2TW | viga（福建） | main | dns | https://www.css2tw.online/ |
@@ -40,23 +40,28 @@
 | 赛博朋克AI | pillow(重庆) | main | HTTP 404 | https://cyberpunkai.art |
 | SimpleThumbnail | 嗡嗡鱼 | main | HTTP 404 | https://simplethumbnail.com |
 | 1desk | godow(杭州) | main | dns | https://www.1desk.app/zh-CN |
-| Backlink Manager | Susu(南京) | main | HTTP 404 | https://backlinkmanager.net |
 | AI资讯日报 | 何夕2077 (武汉)- GIthub, 小宇宙 | main | dns | https://ai.hubtoday.app/ |
-| my-github-2024 | **Ch3nyang(南京)** | main | HTTP 404 | https://2024.ch3nyang.top/ |
+| Green Screen Remover 免费一键抠图 | tushenmei(杭州) | main | dns | https://greenscreenremover.online/ |
 | AI ASMR Generator | 金川(杭州) | main | dns | https://aiasmrgenerator.com |
 | 好有链接 数字名片 | Q.Jin | main | dns | https://links.haoyou.tech |
+| Omnigen2 | ziwu(广州) | main | dns | https://omnigen2.org/ |
 | 去留助手AI | james（武汉）- Github | main | dns | https://www.huiguo.info/ |
 | TmpMail | heyjude(上海） | main | dns | https://www.tmpmail.online |
 | Posterfy | heyjude(上海） | main | dns | https://www.posterfy.art/ |
 | Avatify | heyjude(上海） | main | dns | https://www.avatify.online/ |
 | LLMOCR | Selenium39(广州) | main | HTTP 404 | https://llmocr.com |
+| PoPo | Amyang(美国) | main | dns | https://popo.love |
 | 铜钟 | 李恩泽 | main | dns | https://tonzhon.whamon.com/ |
 | Humanizar Text | iam-tin | main | dns | https://humanizartexto.app/ |
+| 摸鱼地图 | sk(广州) | main | dns | https://moyumap.com/ |
 | Gemlink.app | ShawnHacks(北京) | main | dns | https://gemlink.app |
 | 实时工资计时器 | james（武汉） | main | dns | https://www.realtimesalary.info/ |
+| Quitar Fondo | rns | main | dns | https://quitarfondo.cc/ |
 | AI Instagram Username Generator | hjiayu799 | main | dns | https://instagramusername.org/ |
+| Asphalt Calculator | leo(上海) | main | dns | https://asphaltcalculatorhub.com/ |
 | AI  Dog Olympics Generator | erickkkyt | main | dns | https://www.dogolympics.net/ |
 | fluxcontext | james(杭州） | main | dns | https://fluxcontext.app/ |
+| Headcanon 生成器 - 创作同人小说创意 | rns | main | dns | https://headcanongenerator.fun/ |
 | Labubu Live Wallpaper | Horatio (广州) | main | dns | https://labubulivewallpaper.cc |
 | Vogue Veo 3 Generator | kkkk-杭州 | main | HTTP 410 | https://www.vogueai.net/veo-3-generator |
 | Coast FIRE Calculator | leo(上海) | main | dns | https://coast-fire-calculator.com/ |
@@ -74,7 +79,6 @@
 | buzz-cut AI | 3d-animation | main | dns | https://buzz-cut.me |
 | Board Foot Calculator | Sawana Huang | main | dns | https://boardfootcalculator.cc/ |
 | TarotDreamHub | hanlaoshinb | main | dns | https://www.tarotdreamhub.com/ |
-| bratgenerator | Lee | main | dns | https://bratgenerator.dev/ |
 | TarotQA | Will(杭州) | main | dns | https://tarotqa.com |
 | AI Tool Kit | lkunemail | main | dns | https://aitoolkit.io/ |
 | FramePack AI | Sarkory(广州) | main | dns | https://frame-pack.video |
@@ -116,7 +120,6 @@
 | iFinder | xibobo(上海) | main | dns | https://www.ifinder.one |
 | Abgerny | xiaocui723(广东) | main | dns | https://abgerny.net |
 | AI 形象照 | 阿凯呵 | main | dns | https://luna-headshot.sodair.top/ |
-| 海投简历 | Kevin（长沙） | main | connection refused | https://mengsi.online |
 | SenGen - AI句子生成器 | ConstantLove | main | dns | https://aisengen.com |
 | MiKaPo | Amyang(美国) | main | dns | https://mikapo.amyang.dev |
 | 番石榴实验室 AI 智能应用 | jiangnanboy | main | dns | https://ai.maogoujiaoliuqi.com/ |
@@ -131,6 +134,7 @@
 | 梦幻工坊 | fengfeng(成都) | main | HTTP 404 | https://apps.apple.com/cn/app/id6483932773 |
 | Any Secret | wish | main | HTTP 404 | https://apps.apple.com/cn/app/any-secret/id6448714682 |
 | IP Address Lookup | Aissen | main | dns | https://ipaddress.fun/ |
+| shion | hanaTsuk1 | main | dns | https://shion.app/zh/ |
 | smind.app | ChengKeJ | main | dns | https://www.smind.app |
 | sunost | Shichao（北京） | main | dns | https://sunost.com |
 | toolss.ai | Shichao（北京） | main | dns | https://www.toolss.ai |
@@ -145,7 +149,6 @@
 | 易匹配 | peacefullmind | main | connection refused | https://www.yipipei.com/ |
 | 时光本 | gorpeln(北京) | main | HTTP 404 | https://apps.apple.com/cn/app/%E6%97%B6%E5%85%89%E6%9C%AC-%E6%97%A5%E8%AE%B0%E6%9C%AC-%E7%AC%94%E8%AE%B0%E6%9C%AC-%E8%AE%B0%E4%BA%8B%E6%9C%AC-%E5%A4%87%E5%BF%98%E5%BD%95/id1495623965 |
 | Github 图床 | j20cc(武汉) | main | dns | https://pic.j20.cc |
-| 抖音高转化精准词获取工具 | 简具科技(杭州) | main | HTTP 404 | http://jianju.3ddysj.com/douyinxialachi.html |
 | DevShots | 林建彧 | main | dns | https://devshots.gpwzw.com |
 | VOME | VOME(澳大利亚) | main | HTTP 404 | https://apps.apple.com/au/app/vome/id6468956601 |
 | ChatPPT | Selenium39(广州) | main | dns | http://chatppt.closeai.red |
@@ -153,10 +156,8 @@
 | 未道帮 | 未道科技(杭州) | main | dns | https://helper.aiwave.cc/ |
 | AIGC工具导航 | 未道科技(杭州) | main | dns | https://nav.aiwave.cc/ |
 | AI抠图 | 未道科技(杭州) | main | dns | https://cutout.aiwave.cc/ |
-| 简具 QQ 空间相册导出工具 | 简具科技(杭州) | main | HTTP 404 | http://jianju.3ddysj.com/qqkongjian.html |
 | iChat | xerduo(重庆) | main | connection refused | https://ichatt.cn |
 | Genshin-GPT | limaoyi1(长沙) | main | dns | http://www.limaoyi.top:4400/ |
-| SigniFi | discountry | main | dns | https://www.signifi.life/ |
 | 预算笔记 | GGBond | main | HTTP 404 | https://apps.apple.com/us/app/budget-note/id1623043447 |
 | MCAdmin | 甘小蔗（重庆） | main | HTTP 404 | https://www.mcadmin.cn/ |
 | 口袋四级 | mattewwung(大连) | main | HTTP 404 | https://apps.apple.com/cn/app/id1673721668 |
@@ -179,8 +180,10 @@
 | Amazing-Favorites | newbe36524(上海) | main | dns | https://af.newbe.pro/ |
 | MixLive | YJ1211 | main | dns | https://live.yj1211.work |
 | 早晨计划 | 阿树(上海) | main | HTTP 404 | https://apps.apple.com/cn/app/%E6%97%A9%E6%99%A8%E8%AE%A1%E5%88%92/id1542908683 |
+| bbs1org | bbs1org | programmer | HTTP 404 | https://github.com/bbs1org/bbs1org/releases/latest |
 | Flint | Thy(杭州) | programmer | HTTP 404 | https://github.com/TheFlintAI/Flint |
 | CCHub | Moresl | programmer | HTTP 404 | https://github.com/Moresl/cchub |
+| Gemini CLI Docs | sing1ee(上海) | programmer | dns | https://gemini-cli.xyz/docs/ |
 | NuxtPro开源版本 | IndieMakerKevin(成都) | programmer | HTTP 404 | https://github.com/PennyJoly/NuxtPro |
 | ui2vue | masz | programmer | dns | https://www.ui2vue.cn |
 | PAC代理自动配置管理器 | dodid | programmer | HTTP 404 | https://github.com/dodid/pac-proxy-manager |
@@ -189,9 +192,11 @@
 | SparkDesk-api | HildaM(广东) | programmer | HTTP 404 | https://github.com/HildaM/sparkdesk-api |
 | orient | cxxsucks(徐州) | programmer | HTTP 404 | https://github.com/cxxsucks/orient/releases/tag/v0.3.1 |
 | sha256full/fast/min | Robert1037(清远) | programmer | dns | https://rbtblog.com/posts/SHA256%E7%AE%97%E6%B3%95%E7%9A%84C%E8%AF%AD%E8%A8%80%E5%AE%9E%E7%8E%B0/ |
+| 微型防火墙 | soonxf(wuhu) | programmer | HTTP 404 | https://github.com/soonxf/Micro-Firewall |
 | 蝉语 | 谢宇恒(深圳) | programmer | HTTP 404 | https://cicada-lang.org |
 | 开源选型 | Mizhousoft(赣州) | programmer | dns | https://open.mizhousoft.com |
 | GRule | xnat9(成都) | programmer | HTTP 404 | https://github.com/xnat9/grule |
+| NBlog | RiverTwilight(成都) | programmer | dns | https://blog.yungeeker.com |
 | IRext | Strawmanbobi(南京) | programmer | dns | https://cc.irext.net |
 | Windows 版 tail 命令 | Writeup007 | programmer | HTTP 404 | https://github.com/Writeup007/windows-tail |
 | SOCODE.PRO | Elliot(杭州) | programmer | HTTP 404 | https://socode.pro/extension/ |
@@ -238,7 +243,6 @@
 | 极简待办 | dylan(深圳) | archive | HTTP 404 | https://apps.apple.com/cn/app/%E6%9E%81%E7%AE%80%E5%BE%85%E5%8A%9E-%E8%BD%BB%E9%87%8F%E7%BA%A7%E7%9A%84%E7%8A%B6%E6%80%81%E6%A0%8F%E5%BE%85%E5%8A%9E%E5%B7%A5%E5%85%B7/id1454209103?mt=12 |
 | 在线工具 - OKTools | wangyiwy(重庆) | archive | dns | https://oktools.net |
 | Forget | hujianhang(Beijing) | archive | HTTP 404 | https://apps.apple.com/cn/app/id1448659423 |
-| GRLib | weilaihui(成都) | archive | connection refused | https://www.grlib.com/ |
 | Xcoding | 张琪灵(福州) | archive | dns | http://xcoding.me |
 | Research | Andy | archive | dns | http://www.suiyuanka.com/?q=%E7%8B%AC%E7%AB%8B%E5%BC%80%E5%8F%91%E8%80%85 |
 | 小合集 | Montisan | archive | dns | https://ebooki.cn/ |
