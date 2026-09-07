@@ -1,19 +1,19 @@
-# 失效链接清单（2026-08-31T08:17:51Z）
+# 失效链接清单（2026-09-07T07:07:18Z）
 
-共 341 条疑似失效：
+共 386 条疑似失效：
 
 | 产品 | 开发者 | 版面 | 原因 | 链接 |
 | --- | --- | --- | --- | --- |
 | 听歌Next | Limo(深圳) | main | HTTP 404 | https://tinggenext.com |
 | 谷物OJ | alphadamn(北京) | main | connection refused | http://guwu.camluni.cn:3001 |
+| SignalTo | SignalTo Team | main | dns | https://signalto.io/ |
 | AiSiteLink | AntHome(洛阳) | main | HTTP 404 | https://www.aisitelink.com/ |
 | Seed Audio | yoga666996 | main | HTTP 404 | https://seed-audio.org |
 | MusiCard | shadycheer | main | HTTP 404 | https://musi-card-two.vercel.app |
-| cv.cm | 馒头饭 | main | dns | https://cv.cm |
-| 憩连 | Paul Peng（深圳） | main | dns | https://www.qliann.com |
 | Z3r0 | yv1ing(合肥) | main | dns | https://z3r0.fans/ |
 | 古代灵魂测试 | gf1023456 | main | dns | https://tonystark-ai.ccwu.cc/apti/ |
 | GPT Image 2 | nanobanana-co | main | dns | https://gptimg2.io/zh |
+| Stock Scope | fishisnow | main | dns | https://invest.fishisnow.xyz/ |
 | Destiny Matrix | ouy35521-beep | main | dns | https://destinymatrix.ai |
 | IndieCN | Sun(山东) - | main | HTTP 404 | https://indiecn.app |
 | CCHub | Moresl | main | HTTP 404 | https://github.com/Moresl/cchub |
@@ -23,7 +23,6 @@
 | Seadance AI | nanobanana-co | main | dns | https://seadanceai.net |
 | NNG | WRCoding | main | dns | https://nicknamegeneratorforgames.top/ |
 | BabyFilter AI | Eric（上海） | main | dns | https://babyfilter.ai |
-| grok images | pillow(重庆市) | main | HTTP 404 | https://grokimages.org/ |
 | 牛笔AI - 微信公众号排版工具_在线图文排版神器 | coderlei | main | HTTP 404 | https://niubi.codecvcv.com |
 | Dunk Calculator | august | main | dns | https://www.dunkcalculator.online/ |
 | Demo2APK | DeadWave(北京) | main | connection refused | https://demo2apk.lasuo.ai |
@@ -35,24 +34,22 @@
 | AI 图像站 | h3(广州) | main | HTTP 404 | https://www.gempix2.org |
 | ReadTube | dodid | main | HTTP 404 | https://apps.apple.com/cn/app/readtube-youtube-video-summary/id6752214777 |
 | CSS2TW | viga（福建） | main | dns | https://www.css2tw.online/ |
-| AI 播客生成器 | 何夕2077 (武汉)- GitHub | main | dns | https://podcast.hubtoday.app/ |
-| PromptHub提示词管理优化使用工具 | 何夕2077 (武汉)- GitHub | main | dns | https://prompt.hubtoday.app |
 | nano banana | Ting | main | dns | https://nano-banana.pro/ |
 | opus to mp3 | 虾米 | main | dns | https://opustomp3.online |
-| 赛博朋克AI | pillow(重庆) | main | HTTP 404 | https://cyberpunkai.art |
 | SimpleThumbnail | 嗡嗡鱼 | main | HTTP 404 | https://simplethumbnail.com |
-| Proxied Web from URL | yvonuk | main | dns | https://web.818233.xyz |
 | 1desk | godow(杭州) | main | dns | https://www.1desk.app/zh-CN |
 | Discordtags | xbaicai0 | main | dns | https://discordtags.net |
 | Soulmate Sketch｜AI 灵魂伴侣素描（占星画像生成） | BOS1980 | main | dns | https://soulmatedrawing.live |
-| AI资讯日报 | 何夕2077 (武汉)- GIthub, 小宇宙 | main | dns | https://ai.hubtoday.app/ |
+| 薪资跳动 | Panda (深圳) | main | dns | https://money-dance.com/ |
 | Neetoo | gemoonly | main | HTTP 404 | https://apps.apple.com/cn/app/neetoo/id6743790550?mt=12 |
 | smartimagix | biboom(广州) | main | dns | http://smartimagix.cloud |
 | Green Screen Remover 免费一键抠图 | tushenmei(杭州) | main | dns | https://greenscreenremover.online/ |
 | BirthChartAI | dallen(武汉) | main | dns | https://birthchartai.com/ |
 | AIColoringPages | sk(广州) | main | dns | https://ai-coloring-pages.art |
+| kawaii coloring | Brice(南京) | main | dns | https://kawaiicoloring.org/ |
 | Easy2Text | Shanshi(武汉) | main | dns | https://easy2text.app/ |
 | How To Sketch | wmin(北京) | main | dns | https://howtosketch.net/ |
+| AI Stem Splitter | monsoonw(杭州) | main | dns | https://aistemsplitter.net |
 | my-github-2024 | **Ch3nyang(南京)** | main | HTTP 404 | https://2024.ch3nyang.top/ |
 | AI ASMR Generator | 金川(杭州) | main | dns | https://aiasmrgenerator.com |
 | HiColors | meetqy(成都) | main | dns | https://hicolors.org |
@@ -68,7 +65,6 @@
 | 铜钟 | 李恩泽 | main | dns | https://tonzhon.whamon.com/ |
 | Humanizar Text | iam-tin | main | dns | https://humanizartexto.app/ |
 | 摸鱼地图 | sk(广州) | main | dns | https://moyumap.com/ |
-| Gemlink.app | ShawnHacks(北京) | main | dns | https://gemlink.app |
 | 晚星 | Margox(北京) | main | dns | https://dream.sayhi.cc/ |
 | 实时工资计时器 | james（武汉） | main | dns | https://www.realtimesalary.info/ |
 | KuaishouVideoDownload | ChillWay | main | dns | https://kuaishou-video-download.com/ |
@@ -78,10 +74,8 @@
 | AI  Dog Olympics Generator | erickkkyt | main | dns | https://www.dogolympics.net/ |
 | fluxcontext | james(杭州） | main | dns | https://fluxcontext.app/ |
 | Headcanon 生成器 - 创作同人小说创意 | rns | main | dns | https://headcanongenerator.fun/ |
-| Labubu Live Wallpaper | Horatio (广州) | main | dns | https://labubulivewallpaper.cc |
 | Vogue Veo 3 Generator | kkkk-杭州 | main | HTTP 410 | https://www.vogueai.net/veo-3-generator |
 | Coast FIRE Calculator | leo(上海) | main | dns | https://coast-fire-calculator.com/ |
-| Flux Kontext AI Image Editor | Caron77 | main | dns | https://flux-kontext.xyz |
 | 职场沟通小诸葛 | TuShenmei | main | dns | https://procommai.com/ |
 | veo3 AI video generator | chasays | main | HTTP 404 | https://zacose.com/veo3_ai_video_generator |
 | 特殊符号复制工具 | sagasu | main | HTTP 404 | https://special-characters.aitoolshubs.com/ |
@@ -89,7 +83,6 @@
 | Bypass Turnitin | Anna | main | dns | https://bypassturnitin.net/ |
 | product-rule | aipromptdirectory | main | dns | https://product-rule.com |
 | buzz-cut AI | 3d-animation | main | dns | https://buzz-cut.me |
-| Board Foot Calculator | Sawana Huang | main | dns | https://boardfootcalculator.cc/ |
 | TarotDreamHub | hanlaoshinb | main | dns | https://www.tarotdreamhub.com/ |
 | TarotQA | Will(杭州) | main | dns | https://tarotqa.com |
 | FramePack AI | Sarkory(广州) | main | dns | https://frame-pack.video |
@@ -98,9 +91,7 @@
 | 免费在线 AI 角色脑洞生成工具 | vampirewy | main | HTTP 404 | https://characterheadcanongen.com/zh |
 | 4oimg.org | Caron77 | main | dns | https://4oimg.org |
 | Notion style illustration | yiquan00 | main | dns | https://illustration.imglab.dev |
-| 二维码解码器 | chuyanghui8 | main | dns | https://qrfrompic.com/zh |
 | 临时邮箱 | thence(深圳) | main | dns | https://temp-email.top/ |
-| ImageToAny | Ayden | main | dns | https://imagetoany.com/ |
 | 报告汇 | lizhichao | main | HTTP 404 | https://www.vicsdf.com/ |
 | Gitto | inno(上海) | main | dns | https://www.gitto.ltd/ |
 | AI Affiliate 分销目录 | Leo (上海) | main | HTTP 404 | https://aiaffiliatelist.com/ |
@@ -151,10 +142,10 @@
 | 梦幻工坊 | fengfeng(成都) | main | HTTP 404 | https://apps.apple.com/cn/app/id6483932773 |
 | Any Secret | wish | main | HTTP 404 | https://apps.apple.com/cn/app/any-secret/id6448714682 |
 | IP Address Lookup | Aissen | main | dns | https://ipaddress.fun/ |
+| 微思文稿 | Shalom(上海) | main | dns | https://vslide.cn/dataviz/ |
 | 图生代码 | octopus331 | main | dns | https://www.octopus31.com/code/generate |
 | shion | hanaTsuk1 | main | dns | https://shion.app/zh/ |
 | smind.app | ChengKeJ | main | dns | https://www.smind.app |
-| sunost | Shichao（北京） | main | dns | https://sunost.com |
 | toolss.ai | Shichao（北京） | main | dns | https://www.toolss.ai |
 | ViBoard | eilong (昆明) | main | connection refused | https://nniai.com |
 | 独立开发者导航站 | Indie Maker Fox | main | dns | https://www.indiehackers.site |
@@ -180,6 +171,7 @@
 | 预算笔记 | GGBond | main | HTTP 404 | https://apps.apple.com/us/app/budget-note/id1623043447 |
 | MCAdmin | 甘小蔗（重庆） | main | HTTP 404 | https://www.mcadmin.cn/ |
 | 口袋四级 | mattewwung(大连) | main | HTTP 404 | https://apps.apple.com/cn/app/id1673721668 |
+| 减肥小助手 | mattewwung(大连) | main | HTTP 404 | https://apps.apple.com/cn/app/id1583776291 |
 | SearchEverywhere | cxxsucks(徐州) | main | HTTP 404 | https://github.com/cxxsucks/SearchEverywhere/releases/tag/v0.3.1 |
 | aihub | weekend-project-space | main | dns | https://aihub.bitmagic.space/ |
 | undb | nichenqin(上海) | main | HTTP 404 | https://www.undb.xyz/ |
@@ -194,9 +186,11 @@
 | SongLink | Runjuu（上海） | main | HTTP 404 | https://apps.apple.com/cn/app/songlink/id1341416046 |
 | 集美美图 | dunizb(杭州) | main | HTTP 404 | https://apps.apple.com/cn/app/id1592148389 |
 | 只读链接 | 谢宇恒(深圳) | main | HTTP 404 | https://readonly.link |
+| 梦见账本 | RyukieSama(广州) | main | HTTP 404 | https://apps.apple.com/cn/app/id1498426607 |
 | 有梦记 | seth-shi(西安) | main | dns | https://www.youmengji.zone/ |
 | Amazing-Favorites | newbe36524(上海) | main | dns | https://af.newbe.pro/ |
 | MixLive | YJ1211 | main | dns | https://live.yj1211.work |
+| 早晨计划 | 阿树(上海) | main | HTTP 404 | https://apps.apple.com/cn/app/%E6%97%A9%E6%99%A8%E8%AE%A1%E5%88%92/id1542908683 |
 | bbs1org | bbs1org | programmer | HTTP 404 | https://github.com/bbs1org/bbs1org/releases/latest |
 | Flint | Thy(杭州) | programmer | HTTP 404 | https://github.com/TheFlintAI/Flint |
 | CCHub | Moresl | programmer | HTTP 404 | https://github.com/Moresl/cchub |
@@ -231,9 +225,11 @@
 | Hawthorn Game | 疯狂的小波(武汉) | game | dns | https://hawthorngame.org |
 | tetris | xerduo(重庆) | game | dns | https://tetris.duqing.ink |
 | 点点 | Airsaid（武汉） | game | HTTP 404 | https://play.google.com/store/apps/details?id=com.mugglegame.dotdot |
+| Hackershare | hooopo (北京) | archive | dns | https://hackershare.dev |
 | RobinAlgo | clwater(上海) | archive | dns | http://robinalgo.com/ |
 | 在线AI图像处理 | 6r6(杭州) | archive | dns | https://photo.opencool.cn/ |
 | InfoHub | yuxiaoy(上海) | archive | dns | https://infohub.fun/ |
+| triplan | Mark | archive | dns | https://triplan.tech/?utm_source=cid |
 | 疯狂押韵 | Jezemy(广州) | archive | dns | http://www.jezemy.cn/rhyme |
 | BlinkMath | tobyglei | archive | HTTP 404 | https://apps.apple.com/au/app/blinkmath/id1497540228?l=en |
 | 聚享导航 | wmui | archive | dns | https://www.86886.wang |
@@ -289,19 +285,30 @@
 | ERC20 Token Exchagne | Wang Lingsong | archive | HTTP 404 | https://wanglingsong.github.io/ERC20ExchangeReactUI/ |
 | Facemoji 废萌 | huihut | archive | HTTP 404 | https://play.google.com/store/apps/details?id=com.huihut.facemoji |
 | techattic | alphardex | archive | HTTP 404 | https://techattic.herokuapp.com/ |
+| 临时邮 | xiaobaiso | archive | HTTP 404 | https://itunes.apple.com/cn/app/%E4%B8%B4%E6%97%B6%E9%82%AE-%E5%8D%81%E5%88%86%E9%92%9F%E9%82%AE%E7%AE%B1/id1342693449?mt=8 |
 | 下载视频小助手(微信公众号) | xiaobaiso | archive | HTTP 404 | https://xiaobaiso.github.io/zhihudoc/ |
 | 小视频神器 | 织网哥 | archive | connection refused | https://video2x.cn |
+| 颜文字输入法 | 小芋头君 | archive | HTTP 404 | https://itunes.apple.com/cn/app/yan-wen-zi-shu-ru-fa-zui-qiang/id866753915?mt=8 |
 | 全库网 | mhkz | archive | HTTP 404 | https://www.iquanku.com |
 | TestFlight.top | feilong | archive | dns | https://testflight.top |
 | 地图找租房 | 李国宝 | archive | dns | https://woyaozufang.live/ |
 | NightMate | haxck | archive | HTTP 404 | https://haxck.com/portfolio/src/assets/nmQr.jpg |
 | NEO全资产区块浏览器 | qknow | archive | dns | https://state.otcgo.cn |
+| 排班 | markmiao | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1221228242?mt=8 |
+| 速记 | markmiao | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1263819789?mt=12 |
 | Steve Jrong's Blog UWP | Steve Jrong | archive | dns | https://www.stevejrong.top/download |
+| App 计划 | 张小刚哟 | archive | HTTP 404 | https://itunes.apple.com/cn/app/app%E8%AE%A1%E5%88%92/id1158663523?mt=8 |
 | Vue 资源精选 | sobbingman | archive | dns | http://vue.awesometiny.com/ |
+| 佚览 | 痕迹 | archive | HTTP 404 | https://itunes.apple.com/cn/app/%E4%BD%9A%E8%A7%88/id1358635224?mt=8 |
 | Weather Station on Raspberry Pi | Jianqing | archive | dns | http://rpi.pjq.me/ |
+| Driki | Tang | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1238020177?mt=8 |
 | ToFun | Damon | archive | dns | https://tofun.selfcoding.cn/ |
 | TyLauncher | luckytianyiyan | archive | dns | http://www.tylauncher.com/ |
 | viewpre.com | 糖伴西红柿 | archive | connection refused | https://viewpre.com/ |
+| 四时 | Airing | archive | HTTP 404 | https://itunes.apple.com/us/app/%E5%9B%9B%E6%97%B6/id1272513774?l=zh&ls=1&mt=8 |
+| Jed | Arczzir | archive | HTTP 404 | https://itunes.apple.com/cn/app/jed/id1234853584 |
+| THZ | Arczzir | archive | HTTP 404 | https://itunes.apple.com/cn/app/thz/id1353765033 |
+| 饭起 | Drinking | archive | HTTP 404 | https://itunes.apple.com/cn/app/%E9%A5%AD%E8%B5%B7-%E5%85%B3%E4%BA%8E%E9%A3%9F%E7%89%A9%E7%9A%84%E7%88%B1%E4%B8%8E%E6%95%85%E4%BA%8B/id1209331941?mt=8 |
 | 诗说社 | 曦莫琅 | archive | dns | http://shishuo.wesnice.com/ |
 | 我的浏览器 | luowei | archive | HTTP 404 | http://app.wodedata.com/myapp/mybrowser.html |
 | 照片DIY | luowei | archive | HTTP 404 | http://app.wodedata.com/myapp/photodiy.html |
@@ -310,7 +317,17 @@
 | Mark记事本 | luowei | archive | HTTP 404 | http://app.wodedata.com/myapp/mymarkdown.html |
 | 最强二维码 | luowei | archive | HTTP 404 | http://app.wodedata.com/myapp/qrcoderobot.html |
 | 每日壹单 | genru | archive | HTTP 404 | https://mryd.freeflarum.com |
+| Puff Password Manager | SpongeBobSun | archive | HTTP 404 | https://itunes.apple.com/cn/app/puff-password-manager-open-source-free/id1183663532?mt=8 |
+| Prodigal Music Player | SpongeBobSun | archive | HTTP 404 | https://itunes.apple.com/cn/app/prodigal-music-player/id1231296263?mt=8 |
+| 日本语社区 | Chars | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1184113889 |
+| 牛皮纸 | Chars | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1346384976 |
+| 集木 | enzo-yang | archive | HTTP 404 | https://itunes.apple.com/cn/app/%E9%9B%86%E6%9C%A8/id1273031712?mt=8 |
+| 记忆碎片 | miliPolo | archive | HTTP 404 | https://itunes.apple.com/cn/app/%E8%AE%B0%E5%BF%86%E7%A2%8E%E7%89%87-%E7%94%A8ar%E6%97%B6%E9%97%B4%E6%B5%81%E8%AE%B0%E5%BD%95%E7%94%9F%E6%B4%BB%E7%82%B9%E6%BB%B4/id1340767017?l=zh&ls=1&mt=8 |
 | 狗狗大全 | JY | archive | HTTP 404 | https://play.google.com/store/apps/details?id=com.cjy.DogCollection |
+| TodayMind | 钟颖 | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1207158665 |
+| 小历 | 钟颖 | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1031088612 |
+| Pin | 钟颖 | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1039643846 |
+| Pin for Mac | 钟颖 | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1092997957 |
 | steam-key-online-redeem | LiuYue | archive | dns | https://steamis.me |
 | MLIA | ApacheCN | archive | HTTP 404 | http://ml.apachecn.org/mlia/ |
 | TimeTodo | Easy | archive | connection refused | http://timetodo.ftqq.com/ |
@@ -327,21 +344,49 @@
 | 上海地铁线路图 | neal1991 | archive | HTTP 404 | https://neal1991.github.io/subway-shanghai |
 | 去哪拍照片 | neal1991 | archive | HTTP 404 | http://ozfo4jjxb.bkt.clouddn.com/gh_900fd73a1fd0_258.jpg |
 | GitIssue | GitIssue | archive | HTTP 404 | https://gitissue.com |
+| Channelshunt | Windson | archive | dns | https://www.channelshunt.com/ |
 | EngineGo | Windson | archive | dns | https://www.enginego.org/ |
 | 电子书支援计划 | yaoleifly | archive | dns | https://www.ebooksplan.org/ |
-| 扫地僧的橱柜 | yaoleifly | archive | dns | https://www.ebooksplan.club/ |
+| 扫地僧的橱柜 | yaoleifly | archive | connection refused | https://www.ebooksplan.club/ |
+| 天天成语 | Tolecen | archive | HTTP 404 | https://itunes.apple.com/cn/app/id843601091 |
 | 中文错别字纠错校对系统 | textproofreading | archive | HTTP 404 | http://www.CuoBieZi.net/ |
 | MoreiTunesConnect_iOS | CoderDwang | archive | HTTP 404 | https://github.com/CoderDwang/MoreiTunesConnect_iOS |
+| Monkey for GitHub | coderyi | archive | HTTP 404 | https://itunes.apple.com/cn/app/monkey-for-github/id1003765407 |
 | BuguLink | bugulink | archive | dns | https://bugu.link |
+| MiniHour | Larry | archive | HTTP 404 | https://itunes.apple.com/us/app/minihour/id1383208731?mt=8 |
+| 奇点日报 | Larry | archive | HTTP 404 | https://itunes.apple.com/us/app/wa-wa-yu-jian-hao-yin-le/id1223916908?l=zh&ls=1&mt=8 |
+| Net-Lite | lfb-cd | archive | HTTP 404 | https://itunes.apple.com/app/id1109807177 |
+| 晴天见 | lfb-cd | archive | HTTP 404 | https://itunes.apple.com/app/id1231863233 |
+| Reminder | lfb-cd | archive | HTTP 404 | https://itunes.apple.com/app/id1258508583 |
 | GSYGitHubAPP | CarGuo | archive | HTTP 404 | https://www.pgyer.com/GSYGitHubApp |
+| Ptoo | jiangboLee | archive | HTTP 404 | https://itunes.apple.com/us/app/ptoo/id1219224872?mt=8 |
+| 视觉图表 | MORECATS | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1090006424 |
+| 课程表 | MORECATS | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1219202104 |
+| 取色器+ | MORECATS | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1326506149 |
+| APOD | 滑滑鸡 | archive | HTTP 404 | https://itunes.apple.com/us/app/apod/id1173315594 |
+| TouchBrickout | 滑滑鸡 | archive | HTTP 404 | https://itunes.apple.com/cn/app/touchbrickout/id1314804894 |
+| OnlyTalk | haozes | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1462516460?mt=8 |
+| 玩客钱包 | Tuluobo | archive | HTTP 404 | https://itunes.apple.com/cn/app/%E7%8E%A9%E5%AE%A2%E9%92%B1%E5%8C%85/id1302778851 |
 | 三立三 | forecho | archive | dns | https://3li3.com/ |
 | Shots 精简壁纸 | JonyFang | archive | dns | https://shoots.coding.me/ |
 | 有饭 | tinyao | archive | dns | https://fan.zico.im/ |
 | 路几 | zomco | archive | dns | http://www.ruki.pw |
 | Star Order for Mac/iOS | Akring | archive | dns | https://star-order.com/ |
+| 短信卫士 | Jinya | archive | HTTP 404 | https://itunes.apple.com/cn/app/%E7%9F%AD%E4%BF%A1%E5%8D%AB%E5%A3%AB/id1317407948?mt=8 |
 | 远离手机 | lijianqiang12 | archive | HTTP 404 | http://www.offphone.net |
 | 诗鲸 | 潇涧 | archive | dns | https://tab.leancloud.cn/1/stats/track/2lkBXY |
 | 干货集中营Mac客户端 | 潇涧 | archive | HTTP 404 | https://github.com/hujiaweibujidao/Gank-for-Mac |
 | 声音笔记+ | 叶大侠 | archive | connection refused | http://www.wandoujia.com/apps/com.cmajor.musicnote |
+| 小目标 | Soledad | archive | HTTP 404 | https://itunes.apple.com/cn/app/%E5%B0%8F%E7%9B%AE%E6%A0%87-%E9%87%8F%E5%8C%96%E4%BD%A0%E7%9A%84%E8%BF%9B%E6%AD%A5/id1215312957?mt=8 |
+| AtPill | Gao Deng | archive | HTTP 404 | https://itunes.apple.com/cn/app/id590504521?mt=12 |
+| GhostSKB | GhostSKB | archive | HTTP 404 | https://itunes.apple.com/cn/app/ghostskb/id1134384859?mt=12 |
+| Nihon Cam | KyXu | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1362401778 |
+| Nihon | KyXu | archive | HTTP 404 | https://itunes.apple.com/app/id1315486029 |
+| 闪念 | KyXu | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1342519507 |
+| 记分牌 | KyXu | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1080572635 |
+| Basketball Moment | KyXu | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1185284010 |
+| 时间规划局 | KyXu | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1204689405 |
+| 飞花令 | KyXu | archive | HTTP 404 | https://itunes.apple.com/cn/app/id1340671116 |
+| PriceTag | 61 | archive | HTTP 404 | https://itunes.apple.com/cn/app/price-tag/id1166819590?mt=8 |
 | Cominsoon | wwayne | archive | dns | https://cominsoon.io/ |
 | 寓住 | 糖醋陈皮 | archive | connection refused | https://yuzhu.me |
